@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Shop - Products</title>
+    <meta name="description" content="Explore our full range of fresh, natural juices made from the finest ingredients.">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">Juice Lab</a>
+            <ul class="navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="card.html">Cart <span class="cart-count" style="display: none;">0</span></a></li>
+            </ul>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 120px 0 60px;">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3rem;">Shop Our Juices</h1>
+            <p class="hero-subtitle">Discover our complete range of fresh, natural juices made from the finest ingredients. Every bottle delivers pure, refreshing taste.</p>
+            <div style="margin-top: 2.5rem;">
+                <a href="#products" class="btn btn-primary btn-lg">Browse Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <div class="container">
+            <div class="cards-grid">
+                <!-- Orange Juice -->
+                <div class="card">
+                    <img src="../assets/images/Orange.jpg" alt="Orange Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Orange Juice</h3>
+                        <p class="card-description">Bright, zesty and full of vitamin C. Fresh-squeezed and refreshing - the perfect way to start your day with natural energy.</p>
+                        <div class="card-price">$4.99</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Orange Juice', 4.99)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apple Juice -->
+                <div class="card">
+                    <img src="../assets/images/apple.webp" alt="Apple Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Apple Juice</h3>
+                        <p class="card-description">COLD-PRESSED apple juice with a naturally sweet finish. Pure, refreshing, and packed with the goodness of fresh apples.</p>
+                        <div class="card-price">$5.49</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Apple Juice', 5.49)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Watermelon Juice -->
+                <div class="card">
+                    <img src="../assets/images/Wtermelon.png" alt="Watermelon Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Watermelon Juice</h3>
+                        <p class="card-description">Refreshing watermelon juice that's perfect for hot summer days. Naturally hydrating and deliciously sweet.</p>
+                        <div class="card-price">$6.25</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Watermelon Juice', 6.25)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pineapple Juice -->
+                <div class="card">
+                    <img src="../assets/images/pineapple.jpg" alt="Pineapple Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Tropical Pineapple</h3>
+                        <p class="card-description">Transport yourself to the tropics with this exotic pineapple juice. Sweet, tangy, and bursting with tropical flavor.</p>
+                        <div class="card-price">$5.99</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Tropical Pineapple', 5.99)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mixed Berry Juice -->
+                <div class="card">
+                    <img src="../assets/images/berry.jpg" alt="Mixed Berry Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Mixed Berry Blend</h3>
+                        <p class="card-description">A powerful antioxidant blend featuring strawberries, blueberries, and raspberries. Naturally sweet with a burst of berry goodness in every sip.</p>
+                        <div class="card-price">$6.75</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Mixed Berry Blend', 6.75)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strawberry Juice -->
+                <div class="card">
+                    <img src="../assets/images/strawberries.jpg" alt="Strawberry Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Strawberry Bliss</h3>
+                        <p class="card-description">Pure strawberry juice made from the sweetest, ripest strawberries. A burst of summer in every glass.</p>
+                        <div class="card-price">$5.89</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Strawberry Bliss', 5.89)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banana Juice -->
+                <div class="card">
+                    <img src="../assets/images/banana.jpg" alt="Banana Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Creamy Banana</h3>
+                        <p class="card-description">Smooth and creamy banana juice that's naturally sweet and perfect for breakfast or post-workout nutrition.</p>
+                        <div class="card-price">$4.75</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Creamy Banana', 4.75)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green Juice -->
+                <div class="card">
+                    <img src="../assets/images/orange1.avif" alt="Green Juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Green Power</h3>
+                        <p class="card-description">A healthy blend of green vegetables and fruits for the ultimate nutritious drink. Detoxifying and energizing.</p>
+                        <div class="card-price">$7.25</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Green Power', 7.25)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Juice -->
+                <div class="card">
+                    <img src="../assets/images/orange.png" alt="Citrus Blend" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Citrus Blend</h3>
+                        <p class="card-description">A refreshing blend of orange, lemon, and lime. Zesty, tangy, and perfect for boosting your immune system.</p>
+                        <div class="card-price">$5.49</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Citrus Blend', 5.49)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section" style="background: rgba(40, 167, 69, 0.05);">
+        <div class="container text-center">
+            <h2 class="section-title">Can't Decide?</h2>
+            <p class="section-subtitle">Try our curated juice boxes or create your own custom blend</p>
+            <div style="margin-top: 2rem;">
+                <a href="order.html" class="btn btn-primary btn-lg">Order Now</a>
+                <a href="contact.html" class="btn btn-outline btn-lg" style="margin-left: 1rem;">Custom Orders</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2025 Juice Lab — Fresh & Crafted</div>
+                <nav class="footer-nav">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with for juice lovers everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

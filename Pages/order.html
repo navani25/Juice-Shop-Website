@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Shop - Order</title>
+    <meta name="description" content="Place your juice order with custom selections, delivery preferences, and special requests.">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">Juice Lab</a>
+            <ul class="navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="card.html">Cart <span class="cart-count" style="display: none;">0</span></a></li>
+            </ul>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 120px 0 60px;">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3rem;">Place Your Order</h1>
+            <p class="hero-subtitle">Customize your juice selection and delivery preferences</p>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="section">
+        <div class="container">
+            <form id="orderForm" class="form-container" style="max-width: 1000px;">
+                <!-- Customer Information -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Customer Information</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="customerName" class="form-label">Full Name *</label>
+                            <input type="text" id="customerName" name="customerName" class="form-input" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail" class="form-label">Email Address *</label>
+                            <input type="email" id="customerEmail" name="customerEmail" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" class="form-input" placeholder="(555) 123-4567" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juice Selection -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Select Your Juices</h3>
+                    <div class="cards-grid">
+                        <div class="card">
+                            <img src="../assets/images/Orange.jpg" alt="Orange Juice" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Sunrise Orange</h4>
+                                <p class="card-description">Fresh orange juice - $4.99</p>
+                                <div class="form-group">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" name="orangeQty" class="form-input" min="0" max="50" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../assets/images/apple.webp" alt="Apple Juice" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Crisp Apple</h4>
+                                <p class="card-description">Fresh apple juice - $5.49</p>
+                                <div class="form-group">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" name="appleQty" class="form-input" min="0" max="50" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../assets/images/Wtermelon.png" alt="Watermelon Juice" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Watermelon Chill</h4>
+                                <p class="card-description">Refreshing watermelon - $6.25</p>
+                                <div class="form-group">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" name="watermelonQty" class="form-input" min="0" max="50" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../assets/images/pineapple.jpg" alt="Pineapple Juice" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Tropical Pineapple</h4>
+                                <p class="card-description">Exotic pineapple - $5.99</p>
+                                <div class="form-group">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" name="pineappleQty" class="form-input" min="0" max="50" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../assets/images/berry.jpg" alt="Berry Blend" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Mixed Berry Blend</h4>
+                                <p class="card-description">Antioxidant rich - $6.75</p>
+                                <div class="form-group">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" name="berryQty" class="form-input" min="0" max="50" value="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="../assets/images/strawberries.jpg" alt="Strawberry Juice" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Strawberry Bliss</h4>
+                                <p class="card-description">Sweet strawberries - $5.89</p>
+                                <div class="form-group">
+                                    <label class="form-label">Quantity</label>
+                                    <input type="number" name="strawberryQty" class="form-input" min="0" max="50" value="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Blend Request -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Custom Blend Request</h3>
+                    <div class="form-group">
+                        <label for="customBlend" class="form-label">Want a custom blend? Tell us what you'd like</label>
+                        <textarea id="customBlend" name="customBlend" class="form-textarea" placeholder="Example: I'd like a blend of pineapple, coconut, and lime for a tropical smoothie..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Delivery Information -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Delivery Information</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="deliveryAddress" class="form-label">Delivery Address *</label>
+                            <textarea id="deliveryAddress" name="deliveryAddress" class="form-textarea" placeholder="Street address, city, zip code" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredDate" class="form-label">Preferred Delivery Date *</label>
+                            <input type="date" id="preferredDate" name="preferredDate" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime" class="form-label">Preferred Delivery Time</label>
+                            <select id="preferredTime" name="preferredTime" class="form-input">
+                                <option value="">Select a time</option>
+                                <option value="morning">Morning (8am - 12pm)</option>
+                                <option value="afternoon">Afternoon (12pm - 5pm)</option>
+                                <option value="evening">Evening (5pm - 8pm)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Instructions -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1.5rem;">Special Instructions</h3>
+                    <div class="form-group">
+                        <label for="specialInstructions" class="form-label">Any special delivery instructions or notes</label>
+                        <textarea id="specialInstructions" name="specialInstructions" class="form-textarea" placeholder="Gate code, preferred delivery spot, allergies, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div style="margin-bottom: 3rem; padding: 2rem; background: rgba(40, 167, 69, 0.05); border-radius: var(--border-radius);">
+                    <h3 style="color: var(--primary-green); margin-bottom: 1rem;">Order Summary</h3>
+                    <div id="orderSummary" style="color: var(--text-medium);">
+                        <p>Please select quantities to see your order summary.</p>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+                    <button type="button" class="btn btn-outline" id="saveOrderBtn">Save for Later</button>
+                    <button type="reset" class="btn btn-outline">Clear Form</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pricing Information -->
+    <section class="section" style="background: rgba(255, 255, 255, 0.5);">
+        <div class="container">
+            <h2 class="section-title">Pricing & Delivery</h2>
+            <p class="section-subtitle">Transparent pricing and convenient delivery options</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                        <h3 class="card-title">Competitive Pricing</h3>
+                        <p class="card-description">Fresh juices starting at $4.99. Bulk discounts available for orders over $100.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🚚</div>
+                        <h3 class="card-title">Free Delivery</h3>
+                        <p class="card-description">Free delivery on orders over $50. Same-day delivery available for orders before 2pm.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🕒</div>
+                        <h3 class="card-title">Flexible Scheduling</h3>
+                        <p class="card-description">Choose your preferred delivery window. Evening and weekend delivery options available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2025 Juice Lab — Fresh & Crafted</div>
+                <nav class="footer-nav">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ for juice lovers everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Order form specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderForm = document.getElementById('orderForm');
+            const orderSummary = document.getElementById('orderSummary');
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('preferredDate').setAttribute('min', today);
+
+            // Price mapping
+            const prices = {
+                orangeQty: 4.99,
+                appleQty: 5.49,
+                watermelonQty: 6.25,
+                pineappleQty: 5.99,
+                berryQty: 6.75,
+                strawberryQty: 5.89
+            };
+
+            const names = {
+                orangeQty: 'Sunrise Orange',
+                appleQty: 'Crisp Apple',
+                watermelonQty: 'Watermelon Chill',
+                pineappleQty: 'Tropical Pineapple',
+                berryQty: 'Mixed Berry Blend',
+                strawberryQty: 'Strawberry Bliss'
+            };
+
+            // Update order summary
+            function updateOrderSummary() {
+                let total = 0;
+                let itemCount = 0;
+                let summaryHTML = '';
+
+                Object.keys(prices).forEach(key => {
+                    const qty = parseInt(document.querySelector(`[name="${key}"]`).value) || 0;
+                    if (qty > 0) {
+                        const itemTotal = qty * prices[key];
+                        total += itemTotal;
+                        itemCount += qty;
+                        summaryHTML += `
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>${names[key]} x${qty}</span>
+                                <span>$${itemTotal.toFixed(2)}</span>
+                            </div>
+                        `;
+                    }
+                });
+
+                if (itemCount > 0) {
+                    summaryHTML += `
+                        <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 1.1rem; color: var(--primary-green);">
+                                <span>Total (${itemCount} items)</span>
+                                <span>$${total.toFixed(2)}</span>
+                            </div>
+                            ${total >= 50 ? '<div style="color: var(--primary-green); margin-top: 0.5rem;">✅ Free delivery included!</div>' : '<div style="color: var(--text-medium); margin-top: 0.5rem;">Add $' + (50 - total).toFixed(2) + ' more for free delivery</div>'}
+                        </div>
+                    `;
+                } else {
+                    summaryHTML = '<p style="color: var(--text-medium);">Please select quantities to see your order summary.</p>';
+                }
+
+                orderSummary.innerHTML = summaryHTML;
+            }
+
+            // Add event listeners to quantity inputs
+            document.querySelectorAll('input[name$="Qty"]').forEach(input => {
+                input.addEventListener('input', updateOrderSummary);
+            });
+
+            // Form submission
+            if (orderForm) {
+                orderForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Check if any items are selected
+                    let hasItems = false;
+                    Object.keys(prices).forEach(key => {
+                        const qty = parseInt(document.querySelector(`[name="${key}"]`).value) || 0;
+                        if (qty > 0) hasItems = true;
+                    });
+
+                    if (!hasItems) {
+                        showToast('Please select at least one juice to order', 'error');
+                        return;
+                    }
+
+                    // Show processing
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Processing Order...';
+                    submitBtn.disabled = true;
+
+                    // Simulate order processing
+                    setTimeout(() => {
+                        showToast('Order placed successfully! We\'ll contact you shortly.', 'success');
+                        this.reset();
+                        updateOrderSummary();
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                });
+            }
+
+            // Save for later functionality
+            const saveBtn = document.getElementById('saveOrderBtn');
+            if (saveBtn) {
+                saveBtn.addEventListener('click', function() {
+                    const formData = new FormData(orderForm);
+                    const orderData = {};
+                    for (let [key, value] of formData.entries()) {
+                        orderData[key] = value;
+                    }
+                    localStorage.setItem('savedOrder', JSON.stringify(orderData));
+                    showToast('Order saved for later!', 'success');
+                });
+            }
+
+            // Load saved order if available
+            const savedOrder = localStorage.getItem('savedOrder');
+            if (savedOrder) {
+                try {
+                    const orderData = JSON.parse(savedOrder);
+                    Object.keys(orderData).forEach(key => {
+                        const input = document.querySelector(`[name="${key}"]`);
+                        if (input) input.value = orderData[key];
+                    });
+                    updateOrderSummary();
+                } catch (e) {
+                    console.log('Could not load saved order');
+                }
+            }
+
+            // Initialize summary
+            updateOrderSummary();
+        });
+    </script>
+</body>
+</html>

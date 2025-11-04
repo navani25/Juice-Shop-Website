@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Lab — Fresh, Natural & Crafted</title>
+    <meta name="description" content="Juice Lab — handcrafted fresh juices, cold-pressed and delivered with care. Beautifully designed demo site.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modern Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">Juice Lab</a>
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Pages/products.html">Products</a></li>
+                <li><a href="Pages/about.html">About</a></li>
+                <li><a href="Pages/contact.html">Contact</a></li>
+                <li><a href="Pages/order.html">Order</a></li>
+                <li><a href="Pages/card.html">Cart <span class="cart-count" style="display: none;">0</span></a></li>
+            </ul>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Fresh juices, crafted daily</h1>
+            <p class="hero-subtitle">Real fruit. Minimal processing. Big flavor. Delivered cold and ready to enjoy.</p>
+            <div style="margin-top: 2.5rem;">
+                <a href="Pages/products.html" class="btn btn-primary btn-lg">Shop our juices</a>
+                <a href="Pages/about.html" class="btn btn-outline btn-lg" style="margin-left: 1rem;">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Bestsellers</h2>
+            <p class="section-subtitle">Small-batch juicing using only the best seasonal fruit.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="assets/images/Orange.jpg" alt="Orange juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Sunrise Orange</h3>
+                        <p class="card-description">Bright, zesty and full of vitamin C. Fresh-squeezed and refreshing.</p>
+                        <div class="card-price">$4.99</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Sunrise Orange', 4.99)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/apple.webp" alt="Apple juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Crisp Apple</h3>
+                        <p class="card-description">COLD-PRESSED apple juice with a naturally sweet finish.</p>
+                        <div class="card-price">$5.49</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Crisp Apple', 5.49)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/Wtermelon.png" alt="Watermelon juice" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Watermelon Chill</h3>
+                        <p class="card-description">Hydrating and light — summer in a bottle.</p>
+                        <div class="card-price">$6.25</div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('Watermelon Chill', 6.25)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" style="background: rgba(255, 255, 255, 0.5);">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-image">
+                    <img src="assets/images/pineapple.jpg" alt="Pineapple juice" loading="lazy">
+                </div>
+                <div class="split-content">
+                    <h2>Craft & Care</h2>
+                    <p>At Juice Lab we focus on honest ingredients and thoughtful techniques. No powders, no concentrates — just seasonal fruit, pressed and bottled with care. Our small-batch approach ensures every bottle tastes like the fruit it's made from.</p>
+                    <ul class="feature-list">
+                        <li>Cold-pressed when possible</li>
+                        <li>Locally sourced fruit</li>
+                        <li>No added sugars or preservatives</li>
+                    </ul>
+                    <a href="Pages/contact.html" class="btn btn-outline">Get in touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What customers say</h2>
+            <p class="section-subtitle">Hear from our satisfied customers about their juice experience</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"The orange juice is unbelievably fresh. I can taste the difference — it's crisp and vibrant."</p>
+                    <cite class="testimonial-author">— Jamie L.</cite>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Fast delivery and the packaging keeps the juice cold. Great customer service too."</p>
+                    <cite class="testimonial-author">— Priya K.</cite>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"A perfect post-workout refresh. Love the natural ingredients and clean label."</p>
+                    <cite class="testimonial-author">— Marcus R.</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Orders</h2>
+            <p class="section-subtitle">Reach out for wholesale, events, or custom juice blends.</p>
+            
+            <form id="contactForm" class="form-container">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="How can we help?" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-outline" id="clearBtn">Clear</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>© 2025 Juice Lab — Fresh & Crafted</div>
+                <nav class="footer-nav">
+                    <a href="Pages/privacy.html">Privacy</a>
+                    <a href="Pages/terms.html">Terms</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ for juice lovers everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
