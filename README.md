@@ -16,7 +16,7 @@ A modern, responsive e-commerce website for **Juice Lab** - a premium juice comp
 
 Juice Lab is a complete e-commerce solution built with modern web technologies, featuring a sophisticated shopping cart system, product catalog, and responsive design. The website emphasizes the brand's commitment to quality, natural ingredients, and exceptional customer experience.
 
-**Live Demo**: [View Website](https://example.com) *(Replace with actual URL)*
+**Live Demo**: [View Website]([https://example.com](https://navani25.github.io/Juice-Shop-Website/)) *(Replace with actual URL)*
 
 ## ✨ Key Features
 
